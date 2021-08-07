@@ -47,7 +47,18 @@ This repository contains *Data Science* projects that I worked on while learning
 
     * *Metrics used for checking accuracy: Recall, Precision, Accuracy using confusion matrix*
     * *Tools used: pandas, numpy, statsmodels, sklearn, matplotlib, seaborn, pandas_profiling (for EDA)*
+
 ### ‣ [Cluster Analysis](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Clustering) <a name="ca"></a>
+  * [Clustering groups in EastWestAirlines data](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Clustering/Airline_customer_miles.ipynb): I used three clustering models to get different groups of customers in the data. The **first** model used is the *hierarchial clustering* model which uses the *Euclidean* distance to pair / group the data. We have to give the number of clusters so that the algorithm can make a cut in the hierarchy to give us the specified number of clusters. The **second** model used is the *K-Means clustering* model which selects centeroids in the data and use Euclidean distances to pair the data in a group. The K-Means algorithm requires the value of K, which I found out using elbow method. The **third** model is the *DBSCAN* model which again pairs the group of data using distance measures, usually the Euclidean distance. DBSCAN tries to find the dense regions based on the epsilon value given by us.
+
+    * *Tools used: pandas, numpy, statsmodels, sklearn, scipy, matplotlib*
+
+  * [Clustering groups of states in USA accoriding to crime](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Clustering/USA_crime_data_clustering.ipynb): I used three clustering models to group different states in the USA according to the crimes. The **first** model used is the *hierarchial clustering* model which uses the *Euclidean* distance to group the data. We have to give the number of clusters so that the algorithm can make a cut in the hierarchy to give us the specified number of clusters. The **second** model used is the *K-Means clustering* model which selects centeroids in the data and use euclidean distances to pair the data in a group. The K-Means algorithm requires the value of K, which I found out using elbow method. The **third** model is the *DBSCAN* model which again pairs the group of data using distance measures, usually the Euclidean distance. DBSCAN tries to find the dense regions based on the epsilon value given by us.
+
+    * *Tools used: pandas, numpy, statsmodels, sklearn, scipy, matplotlib*
+
+
+
 ### ‣ [K Nearest Neighbour](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/K%20Nearest%20neighbour) <a name="knn"></a>
 ### ‣ [Decision Tree](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Decision%20Tree) <a name="dt"></a>
 ### ‣ [Random Forest](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Random%20Forest) <a name="rf"></a>
