@@ -19,7 +19,6 @@ This repository contains *Data Science* projects that I worked on while learning
 
 
 
-
 ### ‣ [Simple Linear Regression](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Simple%20linear%20Regression) <a name="slr"></a>
   * [Delivery Time Prediction](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Simple%20linear%20Regression/Delivery%20Time%20SLR%20model.ipynb): This model has just 1 feature i.e. Sorting Time. The target was to predict the Delivery time using the 'Sorting Time' variable. The given data was transformed to find the best suited model. 
 
@@ -49,6 +48,7 @@ This repository contains *Data Science* projects that I worked on while learning
     * *Tools used: pandas, numpy, statsmodels, sklearn, matplotlib, seaborn, pandas_profiling (for EDA)*
 
 ### ‣ [Cluster Analysis](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Clustering) <a name="ca"></a>
+<a title="Chire, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:EM-Gaussian-data.svg"><img width="256" alt="EM-Gaussian-data" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/EM-Gaussian-data.svg/256px-EM-Gaussian-data.svg.png" ></a>
   * [Clustering groups in EastWestAirlines data](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Clustering/Airline_customer_miles.ipynb): I used three clustering models to get different groups of customers in the data. The **first** model used is the *hierarchial clustering* model which uses the *Euclidean* distance to pair / group the data. We have to give the number of clusters so that the algorithm can make a cut in the hierarchy to give us the specified number of clusters. The **second** model used is the *K-Means clustering* model which selects centeroids in the data and use Euclidean distances to pair the data in a group. The K-Means algorithm requires the value of K, which I found out using elbow method. The **third** model is the *DBSCAN* model which again pairs the group of data using distance measures, usually the Euclidean distance. DBSCAN tries to find the dense regions based on the epsilon value given by us.
 
     * *Tools used: pandas, numpy, statsmodels, sklearn, scipy, matplotlib*
@@ -57,10 +57,26 @@ This repository contains *Data Science* projects that I worked on while learning
 
     * *Tools used: pandas, numpy, statsmodels, sklearn, scipy, matplotlib*
 
-
-
 ### ‣ [K Nearest Neighbour](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/K%20Nearest%20neighbour) <a name="knn"></a>
+<a title="Agor153, CC BY-SA 3.0 &lt;https://creativecommons.org/licenses/by-sa/3.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Map1NNReducedDataSet.png"><img width="512" alt="Map1NNReducedDataSet" src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Map1NNReducedDataSet.png"></a>
+
+K Nearest Neighbour (KNN) algorithm is a supervised algorithm that can help solving both classification and regression problems. KNN needs us to specify the value of k which tells it how many neighbours of a data point to consider as nearest neighbours and include them in a group. The value of k can be optimized by trying different values. KNN calculates the distances between the data points using different distance metrics like *"manhattan","euclidean","minkowski"* etc. <a href="https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.DistanceMetric.html" target="_blank">(find more info on distances here)</a>.
+
+  * [Classifying glass type using KNN](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/K%20Nearest%20neighbour/KNN_Glass.ipynb): This model uses KNN algorithm to differentiate the type of glasses using the values of it's elements. Grid search was used to find the best value of k. 
+
+    * *Metrics used for checking accuracy: Accuracy using confusion matrix*
+    * *Parameter tuning technique: GridSearchCV (sklearn.model_selection)
+    * *Tools used: pandas, numpy, sklearn, matplotlib, seaborn*
+
+  * [Classifying animal type in a zoo using KNN](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/K%20Nearest%20neighbour/KNN_Zoo.ipynb): Using information about animals like, whether it has hairs, feathers, teeth, tail and other features like whether it gives eggs, milk or how many legs it has and some more information, our KNN model tries to classify or group the similar animals together. GridSearchCV helped us find the optimum value for k which in this case was 5.
+
+    * *Metrics used for checking accuracy: Accuracy using confusion matrix*
+    * *Parameter tuning technique: GridSearchCV (sklearn.model_selection)
+    * *Tools used: pandas, numpy, sklearn, matplotlib, seaborn*
+
 ### ‣ [Decision Tree](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Decision%20Tree) <a name="dt"></a>
+<a title="Pkuwangyan06, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Decision_Trees.png"><img width="400" alt="Decision Trees" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Decision_Trees.png/512px-Decision_Trees.png"></a>
+
 ### ‣ [Random Forest](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Random%20Forest) <a name="rf"></a>
 ### ‣ [Support Vector Machine](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Support%20Vector%20Machine) <a name="svm"></a>
 ### ‣ [Principal Component Analysis](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/PCA) <a name="pca"></a>
