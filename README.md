@@ -21,7 +21,10 @@ This repository contains *Data Science* projects that I worked on while learning
 
 ### ‣ [Simple Linear Regression](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Simple%20linear%20Regression) <a name="slr"></a>
 <a title="Jsmura, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Dispersion-con-regresion.png"><img width="350" alt="Dispersion-con-regresion" src="https://upload.wikimedia.org/wikipedia/commons/d/de/Dispersion-con-regresion.png"></a>
-  * [Delivery Time Prediction](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Simple%20linear%20Regression/Delivery%20Time%20SLR%20model.ipynb): This model has just 1 feature i.e. Sorting Time. The target was to predict the Delivery time using the 'Sorting Time' variable. The given data was transformed to find the best suited model. 
+ 
+ Simple linear regression model fits the best line in the given data. This best line actually tries to find the best relation between the x variable and y variable. This is basically just a simple line, for which the formula in mathematics is y = mx + c, where m is the slope, c is the intercept, x is the input (independant) feature and y is the output (dependant) feature. Accuracy of the model can be checked using the R-squared value, which tells us how much variance on both sides of the line is being captured by the line fitted by the model. Higher the R-squared value, better the model. I have used 2 methods to make the model. First is using the *statsmodels.fomrmula.api.ols* method and second is the *scipy.stats.linregress* method.
+ 
+  * [Delivery Time Prediction](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Simple%20linear%20Regression/Delivery%20Time%20SLR%20model.ipynb): This dataset has just 1 feature as x variable i.e. Sorting Time. The target was to predict the Delivery time using the 'Sorting Time' variable. The given data was transformed to find the best suited model. 
 
     * *Metrics used for checking accuracy: R-squared, RMSE (root mean squared error)*
     * *Tools used: pandas, numpy, statsmodels, matplotlib, seaborn*
@@ -31,19 +34,25 @@ This repository contains *Data Science* projects that I worked on while learning
     * *Metrics used for checking accuracy: R-squared, RMSE (root mean squared error)*
     * *Tools used: pandas, numpy, statsmodels, matplotlib, seaborn*
 
+* [Salary prediction using scipy.stats.linregress](): This was a very straightforward method where I used scipy.stats.linregress to get the best fitted line in the same Salary data as above.
+
+    * *Metrics used for checking accuracy: R-squared*
+    * *Tools used: pandas, numpy, scipy, matplotlib*
+
+
 ### ‣ [Multiple Linear Regression](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Multiple%20linear%20regression) <a name="mlr"></a>
   * [Prediciton of Profit on 50_Startups data](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Multiple%20linear%20regression/MLR_50_Startups.ipynb): This model made on the famous 50_Startups dataset has four x variables and one y variable. This data had a categorical variable, which had to be One Hot Encoded to get the 'States' variable in binary form. In this model, I used the *statsmodels.formula.api.ols* algorithm to make the Multiple Linear Regression, but this algorithm does not remove the influencing datas and variables by itself. Therefore I have shown different methods to make the model better in my code.
 
     * *Metrics used for checking accuracy: Adjusted R-squared, AIC, P-values, RMSE (root mean squared error)*
     * *Tools used: pandas, numpy, statsmodels, matplotlib, seaborn*
 
-  * [Prediction of Price in ToyotaCorrolla data](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Simple%20linear%20Regression/Salary%20SLR%20model.ipynb): Predicting the price variable with the help of the age, km, hp, cc, doors, gear, quarterly tax & weight variables. Here I used the *statsmodels.formula.api.ols* algorithm which does not optimize the model by itself. Therefore we have used different methods to clean the data and make the model better.
+  * [Prediction of Price in ToyotaCorrolla data](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Multiple%20linear%20regression/toyota_corolla_MLR.ipynb): Predicting the price variable with the help of the age, km, hp, cc, doors, gear, quarterly tax & weight variables. Here I used the *statsmodels.formula.api.ols* algorithm which does not optimize the model by itself. Therefore we have used different methods to clean the data and make the model better.
 
     * *Metrics used for checking accuracy: Adjusted R-squared, AIC, P-values, RMSE (root mean squared error)*
     * *Tools used: pandas, numpy, statsmodels, matplotlib, seaborn*
     
 ### ‣ [Logistic Regression](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Logistic%20Regression) <a name="lr"></a>
-  * [Client term deposit prediciton on bank_data](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Simple%20linear%20Regression/Salary%20SLR%20model.ipynb): This model predicts the 'y' variable using logistic regression. The 'y' variable tells us whether the client has subscribed to a term deposit or not. The prediction is based on the different x variables given in the dataset. most of the independant variables were categorical & therefore had to be encoded. I encoded some categories to a binary version and others to One Hot Encoding. After the categorical data was dealt with, I was left with a lot of features, so I used the mutual info classif method to get the best features and built the model from there. I also made the **logit model** to see how it differs from the **logistic regression** model.
+  * [Client term deposit prediciton on bank_data](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Logistic%20Regression/bank_data_logistic_regression.ipynb): This model predicts the 'y' variable using logistic regression. The 'y' variable tells us whether the client has subscribed to a term deposit or not. The prediction is based on the different x variables given in the dataset. most of the independant variables were categorical & therefore had to be encoded. I encoded some categories to a binary version and others to One Hot Encoding. After the categorical data was dealt with, I was left with a lot of features, so I used the mutual info classif method to get the best features and built the model from there. I also made the **logit model** to see how it differs from the **logistic regression** model.
 
     * *Metrics used for checking accuracy: Recall, Precision, Accuracy using confusion matrix*
     * *Tools used: pandas, numpy, statsmodels, sklearn, matplotlib, seaborn, pandas_profiling (for EDA)*
