@@ -34,7 +34,7 @@ This repository contains *Data Science* projects that I worked on while learning
     * *Metrics used for checking accuracy: R-squared, RMSE (root mean squared error)*
     * *Tools used: pandas, numpy, statsmodels, matplotlib, seaborn*
 
-* [Salary prediction using scipy.stats.linregress](): This was a very straightforward method where I used scipy.stats.linregress to get the best fitted line in the same Salary data as above.
+* [Salary prediction using scipy.stats.linregress](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Simple%20linear%20Regression/linear_regression_using_scipy.ipynb): This was a very straightforward method where I used scipy.stats.linregress to get the best fitted line in the same Salary data as above.
 
     * *Metrics used for checking accuracy: R-squared*
     * *Tools used: pandas, numpy, scipy, matplotlib*
