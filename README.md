@@ -3,33 +3,34 @@ This repository contains *Data Science* projects that I worked on while learning
 
 ## Table of contents
 1. [Simple Linear Regression](#slr)
-2. [Multiple Linear Regression](#mlr)
-3. [Logistic Regression](#lr)
-4. [Cluster Analysis](#ca)
-5. [K Nearest Neighbour](#knn)
-6. [Decision Tree](#dt)
-7. [Random Forest](#rf)
-8. [Support Vector Machine](#svm)
-9. [Principal Component Analysis](#rf)
-10. [Naive Bayes](#nb)
-11. [Recommendation system](#rs)
-12. [Time Series](#ts)
-13. [Neural Networks](#nn)
-14. [Text Mining](#tm)
+2. [Polynomial Regression](#pr)
+3. [Multiple Linear Regression](#mlr)
+4. [Logistic Regression](#lr)
+5. [Cluster Analysis](#ca)
+6. [K Nearest Neighbour](#knn)
+7. [Decision Tree](#dt)
+8. [Random Forest](#rf)
+9. [Support Vector Machine](#svm)
+10. [Principal Component Analysis](#rf)
+11. [Naive Bayes](#nb)
+12. [Recommendation system](#rs)
+13. [Time Series](#ts)
+14. [Neural Networks](#nn)
+15. [Text Mining](#tm)
 
 
 
 ### ‣ [Simple Linear Regression](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Simple%20linear%20Regression) <a name="slr"></a>
 <a title="Jsmura, CC BY-SA 4.0 &lt;https://creativecommons.org/licenses/by-sa/4.0&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Dispersion-con-regresion.png"><img width="350" alt="Dispersion-con-regresion" src="https://upload.wikimedia.org/wikipedia/commons/d/de/Dispersion-con-regresion.png"></a>
  
- Simple linear regression model fits the best line in the given data. This best line actually tries to find the best relation between the x variable and y variable. This is basically just a simple line, for which the formula in mathematics is y = mx + c, where m is the slope, c is the intercept, x is the input (independant) feature and y is the output (dependant) feature. Accuracy of the model can be checked using the R-squared value, which tells us how much variance on both sides of the line is being captured by the line fitted by the model. Higher the R-squared value, better the model. I have used 2 methods to make the model. First is using the *statsmodels.fomrmula.api.ols* method and second is the *scipy.stats.linregress* method.
+ Simple linear regression model fits the best line in the given data. This best line actually tries to find the best relation between the x variable and y variable. This is basically just a simple line, for which the formula in mathematics is y = mx + c, where m is the slope, c is the intercept, x is the input (independant) feature and y is the output (dependant) feature. Accuracy of the model can be checked using the R-squared value, which tells us how much variance on both sides of the line is being captured by the line fitted by the model. Higher the R-squared value, better the model. I have used 2 methods to make the model. First is using the *statsmodels.formula.api.ols* method and second is the *scipy.stats.linregress* method.
  
   * [Delivery Time Prediction](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Simple%20linear%20Regression/Delivery%20Time%20SLR%20model.ipynb): This dataset has just 1 feature as x variable i.e. Sorting Time. The target was to predict the Delivery time using the 'Sorting Time' variable. The given data was transformed to find the best suited model. 
 
     * *Metrics used for checking accuracy: R-squared, RMSE (root mean squared error)*
     * *Tools used: pandas, numpy, statsmodels, matplotlib, seaborn*
 
-  * [Salary Prediction](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Simple%20linear%20Regression/Salary%20SLR%20model.ipynb): Used the x variable 'YearsExperience' to predict the y variable 'Salary'. The data had a very linear correlation and therefore no transformations were required. This was proved by making different transformation and checking the metrics.
+  * [Salary Prediction using OLS](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Simple%20linear%20Regression/Salary%20SLR%20model.ipynb): Used the x variable 'YearsExperience' to predict the y variable 'Salary'. The data had a very linear correlation and therefore no transformations were required. This was proved by making different transformation and checking the metrics.
 
     * *Metrics used for checking accuracy: R-squared, RMSE (root mean squared error)*
     * *Tools used: pandas, numpy, statsmodels, matplotlib, seaborn*
@@ -39,8 +40,21 @@ This repository contains *Data Science* projects that I worked on while learning
     * *Metrics used for checking accuracy: R-squared*
     * *Tools used: pandas, numpy, scipy, matplotlib*
 
+### ‣ [Polynomial Regression](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Polynomial%20regression) <a name="pr"></a>
+<a title="J.N., CC BY-SA 3.0 &lt;http://creativecommons.org/licenses/by-sa/3.0/&gt;, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Lsf.gif"><img width="256" alt="Lsf" src="https://upload.wikimedia.org/wikipedia/commons/1/16/Lsf.gif"></a>
+ 
+What if the data is not linear in relationship? A simple straight line would not work in that case. We can use the **polynomial regression** model in such a case. The formula for the simple straight line is y = mx + c, which is the first order of polynomial. We can have the line fit the data by increasing the [order of the polynomial](https://www.mathsisfun.com/algebra/polynomials.html). When the order of the polynomial is increased the model tries to learn the data better but we have to be careful because a high order of the polynomial might overfit the data and a very low order of polynomial might underfit the data. In order to avoid overfitting or underfitting the model, we can split the data into train and test data and we can train the model on the training data and test it using the test data. Accuracy of the model can be checked using the R-squared value, which tells us how much variance on both sides of the line is being captured by the line fitted by the model. Higher the R-squared value, better the model. We can also visualize the model to see if our model is trying to catch every data and is basically overfitted or not.
+ 
+  * [Height Prediction](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Polynomial%20regression/height%20prediction%20using%20polynomial%20regression.ipynb): This dataset has just 1 feature as x variable i.e. 'Age'. The target was to predict the height using the 'Age' variable. The x & y variable did not have a linear relationship, therefore I used the polynomial regression model on it. To make the polynomial regression model I used a direct function given in numpy, that is *numpy.polyfit*.
+
+    * *Metrics used for checking accuracy: R-squared*
+    * *Tools used: pandas, numpy, matplotlib*
+
 
 ### ‣ [Multiple Linear Regression](https://github.com/FloydFernandes/data-science-portfolio/tree/main/projects/Multiple%20linear%20regression) <a name="mlr"></a>
+
+When the data has more than one feature that can be used to predict the y variable, we can use the *multiple linear regression* model. This model assumes that all the x variables are independant of each other, so if 2 features are are collinear then we have the problem of multi-collinearity which basically means that *one* of the 2 features is not contributing to the model and hence is not required for the model. We can remove such a column so that we save on computing time. To determine which column should be removed, we can check their coefficients. A column (variable) is not giving great insights to the model if the coefficient of the column is near zero. We can also remove influencing data points by identifying them by plotting the influence plot and using *Cook's distance*.
+
   * [Prediciton of Profit on 50_Startups data](https://github.com/FloydFernandes/data-science-portfolio/blob/main/projects/Multiple%20linear%20regression/MLR_50_Startups.ipynb): This model made on the famous 50_Startups dataset has four x variables and one y variable. This data had a categorical variable, which had to be One Hot Encoded to get the 'States' variable in binary form. In this model, I used the *statsmodels.formula.api.ols* algorithm to make the Multiple Linear Regression, but this algorithm does not remove the influencing datas and variables by itself. Therefore I have shown different methods to make the model better in my code.
 
     * *Metrics used for checking accuracy: Adjusted R-squared, AIC, P-values, RMSE (root mean squared error)*
